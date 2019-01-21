@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" stylesheets="@../user/user.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.management.AgenciesController">
+   <children>
+      <Label alignment="CENTER" prefHeight="100.0" prefWidth="700.0" text="Agencies Management">
+         <font>
+            <Font name="Ubuntu" size="45.0" />
+         </font>
+      </Label>
+      <Separator layoutY="100.0" prefWidth="700.0" />
+      <AnchorPane layoutY="100.0" prefHeight="700.0" prefWidth="550.0">
+         <children>
+            <Label fx:id="tableLabel" alignment="CENTER" prefHeight="50.0" prefWidth="550.0" text="Agencies in choosen district:">
+               <font>
+                  <Font name="Ubuntu" size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="agenciesTable" layoutY="50.0" onMouseClicked="#tableClicked" prefHeight="650.0" prefWidth="550.0">
+              <columns>
+                <TableColumn fx:id="parkingPlacesColumn" prefWidth="110.0" text="Places" />
+                  <TableColumn fx:id="houseColumn" prefWidth="110.0" text="House" />
+                  <TableColumn fx:id="codeColumn" prefWidth="110.0" text="Code" />
+                  <TableColumn fx:id="streetColumn" prefWidth="219.0" text="Street" />
+              </columns>
+            </TableView>
+            <AnchorPane fx:id="loader" layoutX="200.0" layoutY="295.0" prefHeight="150.0" prefWidth="150.0" styleClass="loader" />
+         </children>
+      </AnchorPane>
+      <Button contentDisplay="CENTER" layoutX="550.0" layoutY="100.0" mnemonicParsing="false" onAction="#changeClicked" prefHeight="50.0" prefWidth="150.0" text="Change District">
+         <font>
+            <Font name="Ubuntu" size="17.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="550.0" layoutY="165.0" mnemonicParsing="false" onAction="#newClicked" prefHeight="50.0" prefWidth="150.0" text="New Agency">
+         <font>
+            <Font name="Ubuntu" size="17.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="550.0" layoutY="215.0" mnemonicParsing="false" onAction="#deleteClicked" prefHeight="50.0" prefWidth="150.0" text="Delete Agency">
+         <font>
+            <Font name="Ubuntu" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

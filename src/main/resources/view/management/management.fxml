@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" styleClass="userMain" stylesheets="@../user/user.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.management.ManagementController">
+   <children>
+      <Label alignment="CENTER" prefHeight="100.0" prefWidth="700.0" text="Vehicle Rental Management">
+         <font>
+            <Font name="Ubuntu" size="45.0" />
+         </font>
+      </Label>
+      <Separator layoutY="100.0" prefWidth="700.0" />
+      <Button fx:id="agencies" layoutX="150.0" layoutY="130.0" mnemonicParsing="false" onAction="#agenciesClicked" prefHeight="50.0" prefWidth="400.0" stylesheets="@../user/user.css" text="Agencies">
+         <font>
+            <Font name="Ubuntu" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="buses" layoutX="150.0" layoutY="210.0" mnemonicParsing="false" onAction="#busesClicked" prefHeight="50.0" prefWidth="400.0" stylesheets="@../user/user.css" text="Buses">
+         <font>
+            <Font name="Ubuntu" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="drivers" layoutX="150.0" layoutY="290.0" mnemonicParsing="false" onAction="#driversClicked" prefHeight="50.0" prefWidth="400.0" stylesheets="@../user/user.css" text="Drivers">
+         <font>
+            <Font name="Ubuntu" size="25.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

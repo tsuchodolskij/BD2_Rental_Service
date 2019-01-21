@@ -1,0 +1,36 @@
+.userLogin {
+    -fx-background-image: url("/view/image/login.jpg");
+    -fx-background-position: center;
+    -fx-background-size: 650 300;
+}
+
+.button {
+    -fx-background-color:transparent;
+    -fx-background-radius:0;
+    -fx-border-color:black;
+    -fx-border-width:1;
+    -fx-border-radius:10;
+    -fx-background-insets: 0;
+}
+.button:hover{
+    -fx-background-color:
+            #DCDCDC,
+            linear-gradient(to right, darkgrey 0%, lightgray 25%,  transparent 50%, lightgray 75%, darkgrey 100%);
+    -fx-background-radius:10;
+    -fx-border-color:black;
+    -fx-border-width:1;
+    -fx-border-radius:10;
+    -fx-background-insets: 0;
+}
+
+.userMain {
+    -fx-background-image: url("/view/image/main.jpg");
+    -fx-background-position: center;
+    -fx-background-size: 700 800;
+}
+
+.loader{
+    -fx-background-image: url("/view/image/loader.gif");
+    -fx-background-position: center;
+    -fx-background-size: 150 150;
+}

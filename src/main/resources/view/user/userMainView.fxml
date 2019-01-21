@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" styleClass="userMain" stylesheets="@user.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.user.UserMainController">
+   <children>
+      <Pane prefHeight="60.0" prefWidth="700.0">
+         <children>
+            <Label fx:id="loggedUserLabel" prefHeight="60.0" prefWidth="550.0" text=" Logged User: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="550.0" prefHeight="60.0" prefWidth="150.0" text="Actions">
+               <font>
+                  <Font name="Ubuntu" size="39.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Separator layoutY="60.0" prefHeight="1.0" prefWidth="700.0" />
+      <AnchorPane layoutY="60.0" prefHeight="740.0" prefWidth="550.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="550.0" text="Rental History">
+               <font>
+                  <Font name="Ubuntu" size="46.0" />
+               </font>
+            </Label>
+            <TableView fx:id="historyTable" editable="true" layoutY="60.0" prefHeight="680.0" prefWidth="550.0">
+              <columns>
+                <TableColumn fx:id="startDateColumn" prefWidth="160.0" resizable="false" text="Start Date" />
+                <TableColumn fx:id="finishDateColumn" prefWidth="160.0" resizable="false" text="Finish Date" />
+                  <TableColumn fx:id="vehicleTypeColumn" prefWidth="130.0" resizable="false" text="Vehicle Type" />
+                  <TableColumn fx:id="hirePriceColumn" prefWidth="100.0" resizable="false" text="Hire Price" />
+              </columns>
+            </TableView>
+            <AnchorPane fx:id="loader" layoutX="200.0" layoutY="295.0" prefHeight="150.0" prefWidth="150.0" styleClass="loader" visible="false" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="550.0" orientation="VERTICAL" prefHeight="800.0" prefWidth="1.0" />
+      <AnchorPane layoutX="550.0" layoutY="60.0" prefHeight="740.0" prefWidth="150.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#newHireClicked" prefHeight="60.0" prefWidth="150.0" text="New Hire">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutY="60.0" mnemonicParsing="false" onAction="#finishHireClicked" prefHeight="60.0" prefWidth="150.0" text="Finish Hire">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="logoutButton" alignment="CENTER" contentDisplay="CENTER" layoutY="680.0" mnemonicParsing="false" onAction="#logout" prefHeight="60.0" prefWidth="150.0" text="Log out">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
